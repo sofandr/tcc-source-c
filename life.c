@@ -84,6 +84,20 @@ int main(void)
 */
 
 
+
+			for (int k=0; k<screenWidth/rez; k++)
+			{
+			life[k][0]     = GetRandomValue(0, 1);  life[k][screenHeight/rez-1]  = GetRandomValue(0, 1);
+			life_new[k][0] = GetRandomValue(0, 1);  life_new[k][screenHeight/rez-1]  = GetRandomValue(0, 1);
+			}
+
+
+			for (int j=0; j<screenHeight/rez; j++)
+			{
+			life[0][j] = GetRandomValue(0, 1);     life[screenWidth/rez-1][j] = GetRandomValue(0, 1);
+			life_new[0][j] = GetRandomValue(0, 1); life_new[screenWidth/rez-1][j] = GetRandomValue(0, 1);
+			}
+
              for (int k=1; k<screenWidth/rez; k++)
              {
              	for (int j=1; j<screenHeight/rez; j++)
